@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZCADASTRO_FUNCIONARIOS_SRV_01" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Funcionarios" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Nif"/>
+                </Key>
+                <Property Name="Matricula" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Matricula Func" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nome" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Nome Funcionário" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Datanascimento" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Data Nascimento Func" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nif" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="NIF Func" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sexo" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Sexo do Funcionário" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cargo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Cargo Func" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZCADASTRO_FUNCIONARIOS_SRV_01_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="FuncionariosSet" EntityType="ZCADASTRO_FUNCIONARIOS_SRV_01.Funcionarios" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://roffprojectos.roff.pt:50000/sap/opu/odata/sap/ZCADASTRO_FUNCIONARIOS_SRV_01/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://roffprojectos.roff.pt:50000/sap/opu/odata/sap/ZCADASTRO_FUNCIONARIOS_SRV_01/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

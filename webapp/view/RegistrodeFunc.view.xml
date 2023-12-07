@@ -1,0 +1,99 @@
+<mvc:View controllerName="crud.cadastrodefuncionarios.crud.cadastrodefuncionarios.controller.RegistrodeFunc"
+   xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core"
+	xmlns:m="sap.m"
+	height="100%">
+    <m:App id="registrodefunc">
+    <m:pages>
+    <m:Page
+		title="{i18n>TitleHeaderRegister}"
+		titleAlignment="Center"
+		showHeader="true"
+		enableScrolling="false"
+		class="sapUiContentPadding"
+		navButtonPress="onNavBack"
+		showNavButton="true">
+		<m:content>
+			<Table
+				id="tableFunc"
+				rows="{/FuncionariosSet}"
+				ariaLabelledBy="title">
+				<extension>
+					<m:HBox>
+						<m:items>
+							<c:Icon src="sap-icon://add-employee" alt="Cart" size="1.25rem"/>
+							<m:Title text="{i18n>TitleHeader}" titleStyle="H3" class="sapUiTinyMarginBeginEnd"/>
+						</m:items>
+					</m:HBox>
+					<m:OverflowToolbar style="Clear">
+						<m:Title id="title" text="{i18n>TitleSubTitle}"/>
+						<m:ToolbarSpacer/>
+						<m:SearchField
+							placeholder="{i18n>PlaceHolderFilter}"
+							value="{ui>/filterValue}"
+							search="handleTxtFilter"
+							width="15rem"/>
+					</m:OverflowToolbar>
+				</extension>
+				<noData>
+					<m:Link
+						class="sapUiMediumMargin"
+						text="{i18n>errorMessage}."
+						press="clearAllFilters"/>
+				</noData>
+				<columns>
+					<Column>
+						<m:Label text="{i18n>column1}" />
+						<template>
+							<m:Text text="{Matricula}" wrapping="false" />
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="{i18n>column2}" />
+						<template>
+							<m:Text text="{Nome}" wrapping="false" />
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="{i18n>column4}" width="15rem"/>
+						<template>
+							<m:ObjectStatus text="{Nif}"/>
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="{i18n>column5}" />
+						<template>
+							<m:ObjectStatus text="{Sexo}"/>
+						</template>
+					</Column>
+                    <Column>
+						<m:Label text="{i18n>column6}" />
+						<template>
+							<m:Text text="{Cargo}"  wrapping="false" />
+						</template>
+					</Column>
+				</columns>
+				 <footer>
+                <m:OverflowToolbar>
+                    <m:ToolbarSpacer/>
+                    <m:OverflowToolbarButton
+                        tooltip="Create"
+                        text="Create"
+                        icon="sap-icon://add"
+                        press="onOpenDialog"/>
+                    <m:OverflowToolbarButton
+                        tooltip="Delete"
+                        text="Delete"
+                        icon="sap-icon://delete"
+						press="onDelete"/>
+                </m:OverflowToolbar>
+            </footer>
+			</Table>
+		</m:content>
+	</m:Page>
+    </m:pages>
+    </m:App>
+</mvc:View>
+

@@ -1,0 +1,72 @@
+<mvc:View controllerName="crud.cadastrodefuncionarios.crud.cadastrodefuncionarios.controller.Login"
+     xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <App id="login">
+           <Page
+            titleAlignment="Center"
+            title="{i18n>TitlePageLogin}"
+            class="backgroundImage"
+        >
+            <FlexBox class="sapUiSmallMargin" alignContent="Center" justifyContent="Center"  alignItems="Center" height="90%">
+                <f:SimpleForm
+                    id="SimpleFormToolbar"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    labelSpanXL="4"
+                    labelSpanL="3"
+                    labelSpanM="4"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="0"
+                    emptySpanL="4"
+                    emptySpanM="0"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                    ariaLabelledBy="Title1"
+                >
+                    <f:toolbar>
+                        <Toolbar>
+                            <Title text="{i18n>LoginTitle}" />
+                            <ToolbarSpacer />
+                            <Button icon="sap-icon://add" press="onOpenDialog"/>
+                        </Toolbar>
+                    </f:toolbar>
+                    <f:content>
+                        <Toolbar ariaLabelledBy="Title3" />
+                        <Label text="{i18n>EmailTitle}" />
+                        <Input
+                            type="Email"
+                            placeholder="Insira seu e-mail"
+                        />
+                        <Label text="{i18n>TitlePassword}" />
+                        <Input type="Password" />
+                        <Button
+                            tooltip="Login"
+                            press="onOpenView1"
+                            text="{i18n>TitleButtonLogin}"
+                            type="Emphasized"
+                            icon="sap-icon://person-placeholder"
+                        />
+                    </f:content>
+                </f:SimpleForm>
+            </FlexBox>
+            <footer>
+                <OverflowToolbar>
+                    <ToolbarSpacer />
+                    <OverflowToolbarButton
+                        tooltip="Create"
+                        press="onNavigateHome"
+                        text="Create"
+                        icon="sap-icon://information"
+                    />
+                </OverflowToolbar>
+            </footer>
+        </Page>
+    </App>
+</mvc:View>

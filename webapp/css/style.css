@@ -1,0 +1,11 @@
+.backgroundImage {
+    background-image: url('https://atlantconsult.com/upload/medialibrary/90b/shutterstock_1707741448_min.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30rem;
+  }
+.sapUiFormResGrid.sapUiFormBackgrSolid, .sapUiFormResGrid.sapUiFormBackgrTranslucent {
+    background-color: #0504048f;
+    border-radius: .75rem;
+}
